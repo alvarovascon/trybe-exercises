@@ -1,2 +1,2 @@
-  #!/usr/bin bash
-# Eu sou Tryber e...
+#!/usr/bin/bash
+#Eu sou tryber e...Vou ter muito sucesso na programação!
