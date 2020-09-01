@@ -13,7 +13,7 @@ let info2 = {
 }
 
 for (let chave in info) {
-  if (info[chave] == 'sim' && info[chave] == 'sim'){
+  if (info[chave] == 'sim' && info2[chave] == 'sim'){
     console.log('ambos recorrentes');
   } else {
     console.log(`${info[chave]} e ${info2[chave]}`);

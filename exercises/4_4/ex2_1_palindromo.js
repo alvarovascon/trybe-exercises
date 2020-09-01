@@ -1,8 +1,8 @@
-function checkPalindrome (palavra) {
+function checkPalindrome (word) {
   let diffNumber = 0;
 
-  for ( i = 0; i < palavra.length; i += 1){
-    if ( palavra[i] != palavra[palavra.length - i -1]) {
+  for ( i = 0; i < word.length / 2; i += 1){
+    if ( word[i] != word[word.length - i -1]) {
       diffNumber += 1;
     }
   }
