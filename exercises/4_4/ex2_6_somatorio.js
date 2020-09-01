@@ -10,4 +10,4 @@ function somatorio (x) {
   return soma;
 }
 
-console.log(somatorio(n))
+console.log(somatorio(n));
