@@ -16,20 +16,21 @@ function romanos(numero) {
     algarismos[i] = valores[numero[i]]; //cada caracter (numero[x]) tem o nome = uma propriedade de valores
   }
   
-  for (let j in algarismos) {
+  for (let j = 0; j < algarismos.length -1; j += 1) {
   
     if(algarismos[j] >= algarismos[j + 1]) {
       
       soma += algarismos[j];
 
     } else {
-      algarismos[j + 1] = algarismos[j + 1] - algarismos[j];
+      soma -= algarismos[j];
       
     }
 
   }
+  soma += algarismos[algarismos.length - 1];
   return soma;
   
 }
 
-console.log(romanos("XVII"));
+console.log(romanos("XIV"));
