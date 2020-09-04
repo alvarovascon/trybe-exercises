@@ -1,4 +1,0 @@
-# EXERCICIO2
-VAR="Shell Script com variáveis é demais!"
-
-echo $VAR 
