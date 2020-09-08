@@ -72,6 +72,8 @@
       const centerContent = document.createElement('div');
       centerContent.className = 'center-content';
       document.querySelector('.main-content').appendChild(centerContent);
+      centerContentDad = document.querySelector('.center-content').parentElement;
+      centerContentDad.style.backgroundColor = 'green';
 
       // adicionando p (filho de center-content)
       const newP = document.createElement('p');
@@ -87,6 +89,9 @@
       const rightContent = document.createElement('div');
       rightContent.className = 'right-content';
       document.querySelector('.main-content').appendChild(rightContent);
+      //  centraliza right-content
+      rightContent.style.marginRight = 'auto';
+
 
       //  adicionando imagem
       const image = document.createElement('img');
@@ -114,6 +119,10 @@
       //  remove div left-content
       document.querySelector('.main-content').removeChild(leftContent);
 
+      //remove ultimos elementos da lista
+      lista.lastChild.remove();
+      lista.lastChild.remove();
+      
     </script>
   </body>
 </html>
