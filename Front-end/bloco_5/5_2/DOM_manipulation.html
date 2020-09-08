@@ -57,7 +57,15 @@
   </head>
   <body>
     <script>
-      // COLOQUE SEU CÓDIGO AQUI
+      //  adicionando h1
+      let newH1 = document.createElement('h1');
+      newH1.innerHTML = 'Exercício 5.2 - JavaScript DOM';
+      document.querySelector('body').appendChild(newH1);
+
+      // adicionando main-content
+      let mainContent = document.createElement('div');
+      mainContent.className = 'main-content';
+      document.querySelector('body').appendChild(mainContent);
     </script>
   </body>
 </html>
