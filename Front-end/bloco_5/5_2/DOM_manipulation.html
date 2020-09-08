@@ -66,6 +66,21 @@
       let mainContent = document.createElement('div');
       mainContent.className = 'main-content';
       document.querySelector('body').appendChild(mainContent);
+
+      //  adicionando center-content
+      let centerContent = document.createElement('div');
+      centerContent.className = 'center-content';
+      document.querySelector('.main-content').appendChild(centerContent);
+
+      // adicionando p (filho de center-content)
+      let newP = document.createElement('p');
+      newP.innerText = 'Center-content is my dad';
+      document.querySelector('.center-content').appendChild(newP);
+
+      //  adicionando left-content
+      let leftContent = document.createElement('div');
+      leftContent.className = 'left-content';
+      document.querySelector('.main-content').appendChild(leftContent);
     </script>
   </body>
 </html>
