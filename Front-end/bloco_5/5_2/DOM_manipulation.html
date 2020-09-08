@@ -92,6 +92,16 @@
       image.src = 'https://picsum.photos/200';
       image.className = 'small-image';
       document.querySelector('.left-content').appendChild(image);
+
+      //  adicionando lista
+      const lista = document.createElement('ul');
+      const numerosLista = ['um', 'dois', 'três', 'quatro', 'cinco', 'seis', 'sete', 'oito', 'nove', 'dez'];
+      document.querySelector('.right-content').appendChild(lista);
+      for (i = 0; i < numerosLista.length; i += 1) {
+        const newElement = document.createElement('li');
+        newElement.innerText = numerosLista[i];
+        document.querySelector('ul').appendChild(newElement);
+      }
     </script>
   </body>
 </html>
