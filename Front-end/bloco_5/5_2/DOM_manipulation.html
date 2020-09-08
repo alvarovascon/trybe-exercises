@@ -58,29 +58,40 @@
   <body>
     <script>
       //  adicionando h1
-      let newH1 = document.createElement('h1');
+      const newH1 = document.createElement('h1');
       newH1.innerHTML = 'Exercício 5.2 - JavaScript DOM';
       document.querySelector('body').appendChild(newH1);
 
       // adicionando main-content
-      let mainContent = document.createElement('div');
+      const mainContent = document.createElement('div');
       mainContent.className = 'main-content';
       document.querySelector('body').appendChild(mainContent);
 
       //  adicionando center-content
-      let centerContent = document.createElement('div');
+      const centerContent = document.createElement('div');
       centerContent.className = 'center-content';
       document.querySelector('.main-content').appendChild(centerContent);
 
       // adicionando p (filho de center-content)
-      let newP = document.createElement('p');
+      const newP = document.createElement('p');
       newP.innerText = 'Center-content is my dad';
       document.querySelector('.center-content').appendChild(newP);
 
       //  adicionando left-content
-      let leftContent = document.createElement('div');
+      const leftContent = document.createElement('div');
       leftContent.className = 'left-content';
       document.querySelector('.main-content').appendChild(leftContent);
+
+      //  adicionando right-content
+      const rightContent = document.createElement('div');
+      rightContent.className = 'right-content';
+      document.querySelector('.main-content').appendChild(rightContent);
+
+      //  adicionando imagem
+      const image = document.createElement('img');
+      image.src = 'https://picsum.photos/200';
+      image.className = 'small-image';
+      document.querySelector('.left-content').appendChild(image);
     </script>
   </body>
 </html>
