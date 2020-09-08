@@ -61,6 +61,7 @@
       const newH1 = document.createElement('h1');
       newH1.innerHTML = 'Exercício 5.2 - JavaScript DOM';
       document.querySelector('body').appendChild(newH1);
+      newH1.id = 'title';
 
       // adicionando main-content
       const mainContent = document.createElement('div');
@@ -97,17 +98,21 @@
       const lista = document.createElement('ul');
       const numerosLista = ['um', 'dois', 'três', 'quatro', 'cinco', 'seis', 'sete', 'oito', 'nove', 'dez'];
       document.querySelector('.right-content').appendChild(lista);
-      for (i = 0; i < numerosLista.length; i += 1) {
+      for (let i = 0; i < numerosLista.length; i += 1) {
         const newElement = document.createElement('li');
         newElement.innerText = numerosLista[i];
         document.querySelector('ul').appendChild(newElement);
       }
 
       // adicionando 3 h3s
-      for (i = 0; i < 3; i += 1) {
+      for (let i = 0; i < 3; i += 1) {
         const newH3 = document.createElement('h3');
         document.querySelector('.main-content').appendChild(newH3);
+        newH3.className = 'description';
       }
+
+      //  remove div left-content
+      document.querySelector('.main-content').removeChild(leftContent);
 
     </script>
   </body>
