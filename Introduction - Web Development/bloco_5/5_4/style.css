@@ -1,0 +1,27 @@
+.preferencias {
+  position: fixed;
+  bottom: 0px;
+  background-color: white;
+  padding-top: 14px;
+  padding-bottom: 14px;
+  border-top: 2px solid black;
+  width: 100%
+}
+
+.menu {
+  display: inline-block;
+  width: 19%;
+  text-align: center;
+}
+
+div>span {
+  line-height: 22px;
+}
+
+.preferencias div {
+  border-left: 1px dotted gray;
+}
+
+.last-p {
+  margin-bottom: 110px;
+}
