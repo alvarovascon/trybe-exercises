@@ -37,12 +37,12 @@
     </div>
     <div id="pref-font-size" class="menu">
       <span>Tamanho da fonte<br></span>
-      <button class="button">10px</button>
+      <button class="button">16px</button>
       <button class="button">25px</button>
     </div>
     <div id="pref-line-height" class="menu">
       <span>Altura da linha<br></span>
-      <button class="button">1</button>
+      <button class="button">1.15</button>
       <button class="button">1.8</button>
     </div>
     <div id="pref-font-family" class="menu">
@@ -56,18 +56,68 @@
   <script>
     window.onload = function () {
       function setBackgroundColor(color) {
-        let content = document.querySelector(".content")
-        content.style.backgroundColor = color
-        localStorage.setItem("backgroundColor", color)
+        let content = document.querySelector(".main-content")
+        content.style.backgroundColor = color;
+        localStorage.setItem("backgroundColor", color);
       }
 
+      function setTextColor(color) {
+        let content = document.querySelector(".main-content")
+        content.style.color = color;
+        localStorage.setItem("color", color);
+      }
 
+      function setFontSize(size) {
+        let paragraphs = document.querySelectorAll("p");
+        for (let i = 0; i < paragraphs.length; i += 1) {
+          paragraphs[i].style.fontSize = size;
+        }
+        localStorage.setItem("font-size", size);
+      }
 
+      function setLineHeight(size) {
+        let paragraphs = document.querySelectorAll("p");
+        console.log(paragraphs)
+        for (let i = 0; i < paragraphs.length; i += 1) {
+          paragraphs[i].style.lineHeight = size;
+        }
+        localStorage.setItem("line-Height", size);
+      }
       //  escolher cor de fundo
-      let bgcButtons = document.querySelectorAll('.pref-background-color .button');
-      for (let index = 0; i < bgcButtons.length; i += 1)
+      let bgcButtons = document.querySelectorAll('#pref-background-color .button');
+      for (let index = 0; index < bgcButtons.length; index += 1) {
+        bgcButtons[index].addEventListener('click', function(event) {
+          setBackgroundColor(event.target.innerHTML);
+        })
+      }
+
+      //  escolher cor do texto
+      let txtColorButtons = document.querySelectorAll('#pref-text-color .button');
+      for (let index = 0; index < txtColorButtons.length; index += 1) {
+        txtColorButtons[index].addEventListener('click', function(event) {
+          setTextColor(event.target.innerHTML);
+        })
+      }
+      //  escolher font size
+      let fontSizeButtons = document.querySelectorAll('#pref-font-size .button');
+      for (let index = 0; index < fontSizeButtons.length; index += 1) {
+        fontSizeButtons[index].addEventListener('click', function(event) {
+          setFontSize(event.target.innerHTML);
+        })
+      }
+      //  escolher altura da linha
+      let lineHeightButtons = document.querySelectorAll('#pref-line-height .button');
+      for (let index = 0; index < lineHeightButtons.length; index += 1) {
+        lineHeightButtons[index].addEventListener('click', function(event) {
+          setLineHeight(event.target.innerHTML);
+        })
+      }
+      //  escolher tipo da fonte
       
+
     }
+
+    
 
   </script>
 </body>
