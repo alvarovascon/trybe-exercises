@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Formulários</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <form>
+    <fieldset>
+      <legend>Dados pessoais</legend>
+      <div>
+        <label>Nome:</label>
+        <input type="text" maxlength="40" size="40" required>
+      </div>
+      <div>
+      <label>e-mail:</label>
+      <input type="text" maxlength="50" size="50" required>
+    </div>
+    <div>
+      <label>CPF:</label>
+      <input type="text" id="cpf" maxlength="11" size="11" required>
+    </div>
+    <div>
+      <label>Endereço:</label>
+      <input type="text" maxlength="200" size="50" required>
+    </div>
+    <div>
+      <label>Cidade:</label>
+      <input type="text" maxlength="28" size="28" required>
+    </div>
+    <div>
+      <label>Estado:</label>
+      <select id="estados"></select>
+    </div>
+    <div>
+      <input type="radio" name="tipo" required>
+      <label>Casa</label>
+      <input type="radio" name="tipo">
+      <label>Apartamento</label>
+    </div>
+    </fieldset>
+    <fieldset>
+      <legend>Dados do último emprego</legend>
+      <label>Resumo do currículo:</label>
+      <textarea name="resumo" id="resumo" cols="30" rows="10" maxlength="1000"></textarea>
+      <label>Cargo:</label>
+      <input type="text" maxlength="40" required>
+      <label>Descrição do cargo:</label>
+      <textarea name="descricao-cargo" id="descricao-cargo" cols="30" rows="10" maxlength="500"></textarea><br>
+      <label>Data de início</label>
+      <input type="date" required>
+    </fieldset>
+  </form>
+  <button></button>
+  <button id="limpar">Limpar</button>
+  <script src="script.js"></script>
+</body>
+</html>
