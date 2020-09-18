@@ -1,72 +1,89 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Formulários</title>
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
-  <link rel="stylesheet" href="style.css">
-</head>
-<body>
-  <form>
-    <fieldset>
-      <legend>Dados pessoais</legend>
-      <div class="form-group">
-        <label>Nome:</label>
-        <input class="form-control" type="text" maxlength="40" required>
-      </div class="form-group">
-      <div class="form-group">
-      <label>e-mail:</label>
-      <input class="form-control" type="text" maxlength="50" required>
-    </div class="form-group">
-    <div class="form-group">
-      <label>CPF:</label>
-      <input class="form-control" type="text" id="cpf" maxlength="11" size="11" required>
-    </div class="form-group">
-    <div class="form-group">
-      <label>Endereço:</label>
-      <input class="form-control" type="text" maxlength="200" required>
-    </div class="form-group">
-    <div class="form-group">
-      <label>Cidade:</label>
-      <input class="form-control" type="text" maxlength="28" required>
-    </div class="form-group">
-    <div class="form-group">
-      <label>Estado:</label>
-      <select id="estados"></select>
-    </div class="form-group">
-    <div class="form-group">
-      <input type="radio" name="tipo" required>
-      <label>Casa</label>
-      <input type="radio" name="tipo">
-      <label>Apartamento</label>
-    </div class="form-group">
-    </fieldset>
-    <fieldset>
-      <legend>Dados do último emprego</legend>
-      <div class="form-group">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Formulários</title>
+    <link rel="stylesheet" href="bootstrap.min.css">
+  </head>
+  <body>
+    <form>
+      <fieldset>
+        <legend>Dados pessoais</legend>
+
+        <div class="form-row">
+          <div class="form-group col">
+            <label>Nome:</label>
+            <input class="form-control" type="text" maxlength="40" required />
+          </div>
+          <div class="form-group col">
+            <label>e-mail:</label>
+            <input class="form-control" type="email" maxlength="50" required />
+          </div>
+          <div class="form-group col-sm-2">
+            <label>CPF:</label>
+            <input class="form-control" type="number" id="cpf" maxlength="11" required/>
+          </div>
+        </div>
+        <div class="form-row">
+          
+          <div class="form-group col-lg-7">
+            <label>Endereço:</label>
+            <input class="form-control" type="text" maxlength="200" required />
+          </div>
+          <div class="form-group col">
+            <label>Cidade:</label>
+            <input class="form-control" type="text" maxlength="28" required />
+          </div>
+        </div>
+        
+        <div class="form-group">
+          <label>Estado:</label>
+          <select class="form-control form-control-sm col-sm-2" id="estados" ></select>
+        </div>
+        <div class="form-check">
+          <input type="radio" class="form-check-input" name="tipo" required />
+          <label class="form-check-label">Casa</label>
+        </div>
+        <div class="form-check">
+          <input type="radio" class="form-check-input" name="tipo" />
+          <label class="form-check-label">Apartamento</label>
+        </div>
+      </fieldset>
+      <fieldset>
+        <legend>Dados do último emprego</legend>
+
         <label>Resumo do currículo:</label>
-        <textarea class="form-control" name="resumo" id="resumo" cols="30" rows="10" maxlength="1000"></textarea>
-      </div class="form-group">
-      <div class="form-group">
+        <textarea class="form-control" name="resumo" id="resumo" cols="30" rows="10" maxlength="1000" ></textarea>
+
         <label>Cargo:</label>
-        <input class="form-control" type="text" maxlength="40" required>
-      </div class="form-group">
-      <div class="form-group">
+        <input class="form-control" type="text" maxlength="40" required />
+
         <label>Descrição do cargo:</label>
-        <textarea class="form-control" name="descricao-cargo" id="descricao-cargo" cols="30" rows="10" maxlength="500"></textarea>
-      </div class="form-group">
-      <div class="form-group">
+        <textarea
+          class="form-control" name="descricao-cargo" id="descricao-cargo" cols="30" rows="10"  maxlength="500" ></textarea>
+
         <label>Data de início</label>
-        <input class="form-control" type="date" required>
-      </div class="form-group">
-    </fieldset>
-  </form>
-  <button></button>
-  <button id="limpar">Limpar</button>
-  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
-  <script src="script.js"></script>
-</body>
+        <input class="form-control" type="date" required />
+      </fieldset>
+    </form>
+    <button></button>
+    <button id="limpar">Limpar</button>
+    <script
+      src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+      integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+      integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+      integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
+      crossorigin="anonymous"
+    ></script>
+    <script src="script.js"></script>
+  </body>
 </html>
