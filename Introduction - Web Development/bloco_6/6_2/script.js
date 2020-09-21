@@ -31,4 +31,4 @@ clearButton.addEventListener('click', function () {
   }
 });
 
-cpfInput.addEventListener('keypress', checkIfNumber, false);
+cpfInput.addEventListener('keypress', checkIfNumber);
