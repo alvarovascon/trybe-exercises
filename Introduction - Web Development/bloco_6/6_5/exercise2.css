@@ -1,0 +1,21 @@
+html {
+  box-sizing: border-box;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+ul {
+  list-style: none;
+}
+
+@media screen and (max-width: 520px) {
+  body {
+    text-align: center;
+    margin: 0 20px;
+  }
+
+  p, li {
+    font-size: large;
+  }
+}
