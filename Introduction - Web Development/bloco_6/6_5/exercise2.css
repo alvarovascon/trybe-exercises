@@ -18,4 +18,27 @@ ul {
   p, li {
     font-size: large;
   }
+
+  nav, .aside-two {
+    display: none;
+  }
+}
+
+@media screen and (min-width: 520px) {
+  body {
+    margin: 0 40px;
+  }
+
+  header p {
+    text-align: center;
+  }
+  
+  nav ul {
+    display: flex;
+    justify-content: space-around;
+  }
+
+  .asides {
+    display: flex;
+  }
 }
