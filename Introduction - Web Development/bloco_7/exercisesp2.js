@@ -1,3 +1,4 @@
+//  exercise 1
 const factorial = (N) => {
   let result = 1
   for (let i = 2; i <= N; i += 1) {
@@ -7,7 +8,7 @@ const factorial = (N) => {
 }
 
 //  console.log(factorial(5));
-
+//  exercise 2
 const longestWord = (phrase) => {
   const phraseArray = phrase.split(' ');
   let longest = ''
