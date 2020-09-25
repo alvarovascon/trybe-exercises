@@ -6,8 +6,8 @@ const factorial = (N) => {
   }
   return result;
 }
-
 //  console.log(factorial(5));
+
 //  exercise 2
 const longestWord = (phrase) => {
   const phraseArray = phrase.split(' ');
@@ -19,6 +19,23 @@ const longestWord = (phrase) => {
   }
   return longest;
 }
-
 //  console.log(longestWord("Antônio foi no banheiro e não sabbebebebeemos o que aconteceu"));
 
+//  exercicio 4.1
+const bebeto = (string) => {
+  const tryber = 'Tryber x aqui!';
+  const splatTryber = tryber.split('x');
+  return `${splatTryber[0]} ${string} ${splatTryber[1]}`
+}
+
+const skills = ['js', 'html', 'css'];
+
+const skillfunction = (initString) => {
+  resultString = `Eu sou ${initString} e minhas habilidades são:`
+  skills.forEach(element => {
+    resultString += ` ${element}`;
+    //console.log(element)
+  });
+  return resultString;
+}
+console.log(skillfunction('alvaro'));
