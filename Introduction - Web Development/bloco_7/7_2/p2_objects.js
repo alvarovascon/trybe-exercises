@@ -36,11 +36,16 @@ const objValues = (obj) => console.log(Object.values(obj));
 
 // objValues(lesson1);
 
-const allLessons = {};
+const allLessons = Object.assign({}, { lesson1, lesson2, lesson3 });
 
-allLessons.lesson1 = lesson1;
-allLessons.lesson2 = lesson2;
-allLessons.lesson3 = lesson3;
+// console.table(allLessons);
 
-console.log(allLessons);
+const getStudentsNumber = (obj) => {
+  n = 0;
+  for (lesson in obj) {
+    n += obj[lesson].numeroEstudantes;
+  }
+  return n;
+};
 
+// console.log(getStudentsNumber(allLessons));
