@@ -19,7 +19,6 @@ const lesson3 = {
 };
 
 const addTurn = (obj, key, value) => obj[key] = value;
-
 addTurn(lesson2, 'turno', 'manhã');
 
 // console.log(lesson2);
@@ -56,3 +55,15 @@ const getValueByNumber = (lesson, index) => {
 }
 
 // console.log(getValueByNumber(lesson1, 0));
+
+const verifyPair = (obj, key, value) => {
+  if (obj[key] === value) {
+    return true;
+  }
+  return false;
+}
+
+console.log(verifyPair(lesson3, 'turno', 'noite'));
+// Output: true,
+console.log(verifyPair(lesson3, 'materia', 'Maria Clara'));
+// Output: false
