@@ -30,8 +30,17 @@ const listKeys = (objToBeListed) => console.log(Object.keys(objToBeListed));
 
 const objLength = (obj) => console.log(Object.keys(obj).length);
 
-objLength(lesson2);
+// objLength(lesson2);
 
 const objValues = (obj) => console.log(Object.values(obj));
 
-objValues(lesson1);
+// objValues(lesson1);
+
+const allLessons = {};
+
+allLessons.lesson1 = lesson1;
+allLessons.lesson2 = lesson2;
+allLessons.lesson3 = lesson3;
+
+console.log(allLessons);
+
