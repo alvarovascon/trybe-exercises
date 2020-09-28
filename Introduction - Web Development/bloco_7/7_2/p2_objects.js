@@ -49,3 +49,10 @@ const getStudentsNumber = (obj) => {
 };
 
 // console.log(getStudentsNumber(allLessons));
+
+const getValueByNumber = (lesson, index) => {
+  const keys = Object.values(lesson);
+  return keys[index];
+}
+
+// console.log(getValueByNumber(lesson1, 0));
