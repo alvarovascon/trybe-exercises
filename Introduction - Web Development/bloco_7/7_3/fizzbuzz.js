@@ -9,3 +9,9 @@ function myFizzBuzz(num) {
 }
 
 // implemente seus testes aqui
+assert.strictEqual(myFizzBuzz(45), 'fizzbuzz');
+assert.strictEqual(myFizzBuzz(9), 'fizz');
+assert.strictEqual(myFizzBuzz(10), 'buzz');
+assert.strictEqual(myFizzBuzz(7), 7);
+assert.strictEqual(myFizzBuzz('3'), false);
+
