@@ -9,8 +9,11 @@ function myRemove(arr, item) {
   }
   return newArr;
 }
+const array = [1, 2, 3, 4]
+myRemove(array, 3);
 
 // implemente seus testes aqui
-
-assert.notStrictEqual(myRemove([1, 2, 3, 4], 3), [1, 2, 3, 4]);
-assert.strictEqual(myRemove([1, 2, 3, 4], 5), [1, 2, 3, 4]);
+assert.deepStrictEqual(myRemove([1, 2, 3, 4], 3), [1, 2, 4]);
+assert.notDeepStrictEqual(myRemove([1, 2, 3, 4], 3), [1, 2, 3, 4]);
+assert.deepStrictEqual(myRemove([1, 2, 3, 4], 5), [1, 2, 3, 4]);
+assert.deepStrictEqual(array, [1, 2, 3, 4]);
