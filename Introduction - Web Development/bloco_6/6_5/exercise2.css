@@ -1,0 +1,44 @@
+html {
+  box-sizing: border-box;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+ul {
+  list-style: none;
+}
+
+@media screen and (max-width: 520px) {
+  body {
+    text-align: center;
+    margin: 0 20px;
+  }
+
+  p, li {
+    font-size: large;
+  }
+
+  nav, .aside-two {
+    display: none;
+  }
+}
+
+@media screen and (min-width: 520px) {
+  body {
+    margin: 0 40px;
+  }
+
+  header p {
+    text-align: center;
+  }
+  
+  nav ul {
+    display: flex;
+    justify-content: space-around;
+  }
+
+  .asides {
+    display: flex;
+  }
+}

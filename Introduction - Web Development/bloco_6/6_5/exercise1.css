@@ -1,0 +1,48 @@
+body {
+  margin: 0 20px;
+}
+h1 {
+  font-size: 1.6rem;
+}
+
+p {
+  font-size: 1.3rem;
+}
+
+h2 {
+
+}
+
+img {
+  max-width: 100%;
+  padding: 20px 0;
+}
+
+figure {
+  margin: 0;
+}
+
+@media screen and (min-width: 480px) {
+
+  body {
+    background-color: rgb(200, 200, 200);
+    margin: 0 30px;
+  }
+  h1 {
+    font-size: 2rem;
+  }
+  
+  p {
+    font-size: 1rem;
+  }
+
+  .figure-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+
+  img {
+    max-width: 220px;
+  }
+}
