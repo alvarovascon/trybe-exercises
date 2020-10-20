@@ -1,0 +1,14 @@
+body {
+  background-color: rgb(230, 240, 230);
+  margin: auto;
+  width:70%
+}
+
+form {
+  background-color: white;
+  padding: 5%;
+}
+
+button {
+  margin: 20px 10% 10px 0;
+}
