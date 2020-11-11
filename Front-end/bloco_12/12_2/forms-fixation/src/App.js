@@ -1,13 +1,26 @@
 import React from 'react';
 import './App.css';
-import Form from './Form';
+import NameInput from './NameInput';
 
 class App extends React.Component {
+  constructor(props) {
+    super(props)
+    this.state = { name: '' };
+  }
+
+  handleChange = (event) => 
+    this.setState({
+    [event.target.name]: event.target.value.toUpperCase()})
   render() {
     return (
       <div>
         <header></header>
-        <Form />
+        <form>
+        <fieldset>
+          <NameInput name={this.state.name} handleChange={this.handleChange} />
+        </fieldset>
+      </form>
+        
       </div>
     );
   }
