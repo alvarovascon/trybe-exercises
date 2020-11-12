@@ -10,6 +10,9 @@ class App extends React.Component {
 
   handleChange = (event) => 
     this.setState({
+    [event.target.name]: event.target.value})
+
+  handleNameChange = (event) => this.setState({
     [event.target.name]: event.target.value.toUpperCase()})
   render() {
     return (
@@ -17,7 +20,7 @@ class App extends React.Component {
         <header></header>
         <form>
         <fieldset>
-          <NameInput name={this.state.name} handleChange={this.handleChange} />
+          <NameInput name={this.state.name} handleNameChange={this.handleNameChange} />
         </fieldset>
       </form>
         
