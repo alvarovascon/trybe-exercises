@@ -1,5 +1,3 @@
-const readlineSync = require('readline-sync');
-
 const inquirer = require('inquirer');
 
 function calculaIMC(answers) {
@@ -34,5 +32,4 @@ inquirer
   ])
     .then(answers => {
       calculaIMC(answers);
-    })
-      .catch();
+    });
